@@ -1,5 +1,6 @@
 //module imports
 var express = require('express');
+const gpio = require('onoff').Gpio;
 
 //utility imports
 var config = require('./utils/config');
@@ -20,6 +21,17 @@ app.use('/controllers', express.static('controllers'));
 app.get('/', (req, res) => {
     res.render('index');
 });
+
+var pin = new gpio(config.pin, 'out');
+
+module.exports = {
+    pinOn = () => {
+        pin.writeSync(1);
+    },
+    pinOff = () => {
+        pin.writeSync(0);
+    }
+}
 
 app.listen(port);
 console.log(`The server is listening on port ${port}`);

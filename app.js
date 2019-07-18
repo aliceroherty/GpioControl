@@ -25,10 +25,10 @@ app.get('/', (req, res) => {
 var pin = new gpio(config.pin, 'out');
 
 module.exports = {
-    pinOn = () => {
+    pinOn: () => {
         pin.writeSync(1);
     },
-    pinOff = () => {
+    pinOff: () => {
         pin.writeSync(0);
     }
 }

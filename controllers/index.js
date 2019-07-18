@@ -11,11 +11,9 @@ window.onload = () => {
 
 const on = () => {
     console.log('on');
-    app.pinOn();
 }
 
 const off = () => {
     console.log('off');
-    app.pinOff();
 }
 

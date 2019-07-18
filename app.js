@@ -18,7 +18,7 @@ app.use('/assets', express.static('assets'));
 app.use('/controllers', express.static('controllers'));
 
 //Setting up Gpio pin
-var pin = new gpio(config.pin, 'out');
+//var pin = new gpio(config.pin, 'out');
 
 //routing
 app.get('/', (req, res) => {
@@ -26,12 +26,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/on', () => {
-    pin.writeSync(1);
+    //pin.writeSync(1);
     console.log('on');
 });
 
 app.get('/off', () => {
-    pin.writeSync(0);
+    //pin.writeSync(0);
     console.log('off');
 });
 

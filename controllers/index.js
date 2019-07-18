@@ -10,10 +10,8 @@ window.onload = () => {
 }
 
 const on = () => {
-    console.log('on');
 }
 
 const off = () => {
-    console.log('off');
 }
 

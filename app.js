@@ -25,13 +25,13 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/on', () => {
+app.get('/on', (req, res) => {
     pin.writeSync(1);
     console.log('on');
     res.render('index');
 });
 
-app.get('/off', () => {
+app.get('/off', (req, res) => {
     pin.writeSync(0);
     console.log('off');
     res.render('index');

@@ -1,17 +1,9 @@
-var app = require('../app');
+$(document).ready(() => {
+    $('#btn_on').click(() => {
+        window.location.href = '/on';
+    });
 
-const $ = (id) => {
-    return document.getElementById(id);
-}
-
-window.onload = () => {
-    $('btn_on').onclick = on;
-    $('btn_off').onclick = off;
-}
-
-const on = () => {
-}
-
-const off = () => {
-}
-
+    $('#btn_off').click(() => {
+        window.location.href = '/off';
+    });
+});

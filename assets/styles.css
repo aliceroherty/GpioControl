@@ -33,7 +33,7 @@ main {
 }
 
 h2 {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     font-size: 2em;
     text-shadow: 0.5px 0.5px #6b6b6b;
 }
@@ -45,42 +45,35 @@ h1 {
 }
 
 #btn_container {
-    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: auto;
+    margin-top: 3em;
+    margin-bottom: 1em;
 }
 
 .btn {
     background-image: radial-gradient(circle at 30%, #b76ce6, #ff87f5);
-    width: 40%;
-    height: 6em;
+    width: 35%;
+    height: 4em;
     border-radius: 4em;
     border: none;
-    margin-bottom: 1em;
     box-shadow: 0px 0px 10px 5px #46454a;
-}
-
-a {
     color: #fff;
-    text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-shadow: 0.5px 0.5px #6b6b6b;
 }
 
+
 @media only screen and (max-width: 576px) { 
     h1 {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 
     h2 {
-        font-size: 1em;
-    }
-
-    a {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     #wrapper {
@@ -92,13 +85,15 @@ a {
     }
 
     .btn:active {
-        box-shadow: 0px 0px 10px 3px #46454a;
+        box-shadow: 0px 0px 10px 2px #6b6b6b;
     }
 
     .btn {
-        box-shadow: 0px 0px 10px 2px #6b6b6b;
-        height: 4em;
+        box-shadow: 0px 0px 10px 3px #46454a;
+        width: 45%;
+        height: 3.5em;
         border-radius: 2em;
+        font-size: 2em;
     }
 }
 
@@ -111,10 +106,6 @@ a {
         font-size: 1.5em;
     }
 
-    a {
-        font-size: 2em;
-    }
-
     #wrapper {
         width: 89%;
     }
@@ -124,13 +115,15 @@ a {
     }
 
     .btn:active {
-        box-shadow: 0px 0px 10px 3px #46454a;
+        box-shadow: 0px 0px 10px 2px #6b6b6b;
     }
 
     .btn {
-        box-shadow: 0px 0px 10px 2px #6b6b6b;
-        height: 4em;
+        box-shadow: 0px 0px 10px 3px #46454a;
+        width: 40%;
+        height: 4.25em;
         border-radius: 2em;
+        font-size: 1.75em;
     }
 }
 

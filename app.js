@@ -16,25 +16,36 @@ app.set('view engine', 'ejs');
 //setting static routes
 app.use('/assets', express.static('assets'));
 app.use('/controllers', express.static('controllers'));
+app.use('/utils', express.static('utils'));
 
 //Setting up Gpio pin
 var pin = new gpio(config.pin, 'out');
 
+var getStatus = () => {
+    if (pin.readSync() == 0) {
+        return 'OFF';
+    }
+    else {
+        return 'ON';
+    }
+}
+
 //routing
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {status: getStatus()});
 });
 
+//button clicks
 app.get('/on', (req, res) => {
     pin.writeSync(1);
+    res.render('index', {status: getStatus()});
     console.log('on');
-    res.render('index');
 });
 
 app.get('/off', (req, res) => {
     pin.writeSync(0);
+    res.render('index', {status: getStatus()});
     console.log('off');
-    res.render('index');
 });
 
 app.listen(port);
